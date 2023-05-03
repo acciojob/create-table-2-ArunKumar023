@@ -1,17 +1,17 @@
-const createTableBtn = document.getElementById("createTableBtn");
-const myTable = document.getElementById("myTable");
-
 function createTable() {
-  const numRows = prompt("Input number of rows");
-  const numCols = prompt("Input number of columns");
+    //Write your code here
 
-  for (let i = 0; i < numRows; i++) {
-    const row = myTable.insertRow(i);
-    for (let j = 0; j < numCols; j++) {
-      const cell = row.insertCell(j);
-      cell.innerHTML = `Row-${i} Column-${j}`;
-    }
-  }
+  let rows = prompt("Input number of rows");
+	let cols = prompt("Input number of columns");
+
+	for(let i = 0; i < rows; i++){
+		let row = document.createElement("tr");
+		for(let j = 0; j < cols; j++){
+			let col = document.createElement("td");
+			col.innerText = `Row-${i} Column-${j}`;
+			row.appendChild(col);
+		}
+		table.appendChild(row);
+	}
+
 }
-
-createTableBtn.addEventListener("click", createTable);
